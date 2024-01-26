@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>
+Matchpiece orders
+</title>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+.welbasex{margin:auto;width:80px;padding:15px;font-size:12px;}
+.mprounded{border-radius:10%;border:solid 1px #fff;object-fit: cover;}
+@media(max-width:576px)
+{
+.col-lg-4{width:33.33%;}
+}
+</style>
+
+</head>
+<body>
+<div class="container-fluid">
+<div class="row" style="background-color:#ffd6dd;padding:10px;position:sticky;top:0;z-index:1;">
+<div class="col-lg-12" >
+<center>
+<h4>Your Orders</h4>
+<p>track your orders to be ready to unbox it !</p>
+</center>
+</div>
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="row" style="padding:20px;">
+<div class="col-lg-6" style="padding:20px;margin-bottom:20px;">
+
+<div style="padding:10px;border:solid 2px #318580;">
+<center>
+<div class="row">
+<h5>Jack Sparrow's Painting </h5>
+<div class="col-lg-4 welbasex">
+ <p style="padding:10px;border:solid 1px #318580;border-radius:10%;">Color<br><b style="color:green;">Green</b></p>
+</div>
+<div class="col-lg-4 " style="padding-top:10px;">
+  <img class="mprounded" src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" alt="Card image" style="width:100%;">
+</div>
+<div class="col-lg-4 welbasex">
+  <p style="padding:10px;border:solid 1px #318580;border-radius:10%;">Size<br><b>L</b></p>
+</div>
+</div>
+</center>
+
+       <div style="padding:10px;">
+	    <p class="alert alert-info">Prize : <b>5000.00</b><b><i style="float:right;">...</i></b></p>
+		<p class="alert alert-success"><b>Online Paid</b></p><hr>
+	    <h6>Product Reached At </h6> <p><i style="float:left;">Source</i><i style="float:right;">To-You</i></p>
+		<br>
+		<div style="background-color:#ffd6dd; width:100%; height:5px;border-radius:50%;">
+		<img id="pid" src="C:\matchpiece\parcel-clipart-gift-pencil-and-color-parcel-clipart-gift-3.png" 
+		style="width:20px;height:20px;position:relative;top:-15px;left:3%;"></img>
+		</div>
+	   </div>
+	   <p style="margin-left:10px;"><i>will delivered today's afternoon !</i></p>
+	   <br>
+      <a  style="margin-left:10px;" href="#" class="btn btn-primary">See Product</a>
+	  <Button onclick="" class="btn btn-warning" style="margin:5px;"><span class="spinner-border spinner-border-sm"></span>Cancel Order</Button>
+</div>
+</div>
+
+<div class="col-lg-6" style="padding:20px;margin-bottom:20px;">
+
+<div style="padding:10px;border:solid 2px #318580;">
+<center>
+<div class="row">
+<h5>Jack Sparrow's Painting </h5>
+<div class="col-lg-4 welbasex">
+ <p style="padding:10px;border:solid 1px #318580;border-radius:10%;">Color<br><b style="color:green;">Green</b></p>
+</div>
+<div class="col-lg-4 " style="padding-top:10px;">
+  <img class="mprounded" src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" alt="Card image" style="width:100%;">
+</div>
+<div class="col-lg-4 welbasex">
+  <p style="padding:10px;border:solid 1px #318580;border-radius:10%;">Size<br><b>L</b></p>
+</div>
+</div>
+</center>
+
+       <div style="padding:10px;">
+	    <p class="alert alert-info">Prize : <b>5550.00</b><b><i style="float:right;" onclick="gst()">...</i></b></p>
+		
+	<table class="table table-hover" style="display:none;" id="table">
+		<tbody>
+      <tr>
+        <td>Product Prize </td>
+		<td>: </td>
+        <td>5000.00</td>
+      </tr>
+      <tr>
+        <td>Delivery Charge </td>
+		<td>: </td>
+        <td>50.00</td>
+        
+      </tr>
+      <tr>
+        <td>GST </td>
+		<td>: </td>
+        <td>500.00</td>
+        
+      </tr>
+	   <tr>
+        <td><b>Total </b></td>
+		<td>: </td>
+        <td>5550</td>
+        
+      </tr>
+    </tbody>
+	</table>
+	
+		<script>
+		var turn=0;
+		function gst()
+		{
+		if(turn<1)
+		{
+		 var t=document.getElementById("table");
+		 t.style.display="block";
+		 turn++;
+		 }
+		 else
+		 {
+		  var t=document.getElementById("table");
+		 t.style.display="none";
+		 turn--;
+		 }
+		 var gst = (5000*10)/100;
+		}
+		</script>
+		
+		<p class="alert alert-success"><b>Online Paid</b></p><hr>
+	    <h6>Product Reached At </h6> <p><i style="float:left;">Source</i><i style="float:right;">To-You</i></p>
+		<br>
+		<div style="background-color:#ffd6dd; width:100%; height:5px;border-radius:50%;">
+		<img id="product" src="C:\matchpiece\parcel-clipart-gift-pencil-and-color-parcel-clipart-gift-3.png" 
+		style="width:20px;height:20px;position:relative;top:-15px;left:3%;"></img>
+		</div>
+		<script>
+		function playorder()
+		{
+		var o=document.getElementById("product");
+		if(parseInt(o.style.left)<90)
+		{
+		o.style.left=parseInt(o.style.left)+15+"%";
+		}
+		else
+		{
+		alert("Product Delivered");
+		
+		}
+		}
+		</script>
+	   </div>
+	   <p style="margin-left:10px;"><i>will delivered today's afternoon !</i></p>
+	   <br>
+      <a  style="margin-left:10px;" href="#" class="btn btn-primary">See Product</a>
+	  <Button onclick="playorder()" class="btn btn-warning" style="margin:5px;"><span class="spinner-border spinner-border-sm"></span>Cancel Order</Button>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

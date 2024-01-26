@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>
+Matchpiece
+</title>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+.mpshow{display:none;float:right;}
+.show{display:block;}
+
+@media(max-width:576px){
+ .mpshow{display:block;}
+ }
+ @media(max-width:991px){
+ .mpshow{display:block;}
+ }
+ 
+ @media(max-width:991px){
+ .show{display:none;}
+ }
+</style>
+
+<script>
+function unavailableclose()
+{
+var o=document.getElementById("addproduct");
+o.style.display="none";
+}
+function uploadproduct()
+{
+var o=document.getElementById("addproduct");
+o.style.display="block";
+o.style.width="70%";
+}
+</script>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row" style="background-color:#76c4b3;">
+<div class="col-lg-2">
+<center><img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin:10px;border-radius:30px;"></img></center>
+</div>
+<div class="col-lg-3">
+<p  style="margin:10px;">
+<h4>City Mall<span class="mpshow"><button class="btn btn-light" onclick="uploadproduct()">Add</button></span></h4>
+<p>Owned by <b>Manoj Gothankar</b>
+</p>
+</p>
+</div>
+
+<div class="col-lg-3">
+<p  style="margin:10px;">
+<h4 >Total Business</h4>
+<p>This month <b>50,000</b></p>
+</p>
+</div>
+
+<div class="col-lg-4">
+<div  style="margin:10px;" class="show">
+<center><h4 >Add new Product</h4>
+<p><button class="btn btn-light" onclick="uploadproduct()">Add</button></p></center>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="container" id="addproduct" style="display:none;">
+<form action="" method="POST">
+<div class="row" style="margin-top:15px;">
+<div class="col-lg-6">
+<button class="btn"  style="float:right;background-color:#76c4b3;" onclick="unavailableclose()">-</button>
+<h4>Upload New Product</h4><br>
+    <h5><input type="text" placeholder="Product Title" class="form-control"></h5>
+	<p class="form-lable">Upload Product Picture:</p>
+	<input type="file" class="btn form-control" style="margin:2px;background-color:#ffd6dd;"  accept="image/png, image/jpeg">
+	<input type="file" class="btn form-control" style="margin:2px;background-color:#ffd6dd;" >
+	<input type="file" class="btn form-control" style="margin:2px;background-color:#ffd6dd;">
+	<input type="file" class="btn form-control" style="margin:2px;background-color:#ffd6dd;">
+	<input type="file" class="btn form-control" style="margin:2px; margin-bottom:15px;background-color:#ffd6dd;">
+	<br>
+	<p>
+	Actual Price :<input type="text" class="form-control">
+	<br>
+	Discount Price :<input type="text" class="form-control">
+	<br>
+	Expire On:<input type="Date" class="form-control">
+	<br>
+	<p class="form-lable">Select Available Sizes :</p>
+	<input type="checkbox" value="m" name="size"> M <br>
+	<input type="checkbox" value="l" name="size"> L <br>
+	<input type="checkbox" value="x" name="size"> X <br>
+	<input type="checkbox" value="xl" name="size"> XL<br>
+	</p>
+
+</div>
+  
+<div class="col-lg-6">
+	<p><h5>Features of Product</h5>
+	Feature 1st :<input type="text" class="form-control">
+	<br>
+	Feature 2nd :<input type="text" class="form-control">
+	<br>
+	Feature 3rd :<input type="text" class="form-control">
+	<br>
+		Feature 4th :<input type="text" class="form-control">
+	<br>
+		Feature 5th :<input type="text" class="form-control">
+	<br>
+	<br>
+<h5>Other Offers</h5>
+<input type="checkbox" class="form-check-input" > Eligible for Free delivery
+<br>
+<input type="checkbox" class="form-check-input"> EMI starts at 100 INR
+<br>
+<br>
+	<h5>Payment Offers</h5>
+	Offer 1st :<input type="text" class="form-control">
+	<br>
+	Offer 2nd :<input type="text" class="form-control">
+	<br>
+	</p>
+	<input type="submit" class="btn" style="background-color:#76c4b3;" value="Launch Product" >
+	<hr>
+</div>
+</div>
+</form>
+</div>
+<br>
+
+<div class="container">
+<div class="row" style="border-radius:10px; border:solid 2px #318580;padding:10px;">
+<div class="col-lg-4">
+<center>
+<h4>Get one by one free</h4>
+<h6>Available Sizes - <i style="color:red;">M , L , X , XL</i></h6>
+
+<img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin-top:5px;"></img>
+<img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin-top:5px;"></img>
+<img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin-top:5px;"></img>
+<img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin-top:5px;"></img>
+<img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin-top:5px;"></img>
+<img src="https://i1.sndcdn.com/artworks-1kK2LeUMqtUH5SIx-IIYPDA-t500x500.jpg" width="100px" height="100px" style="margin-top:5px;"></img>
+</center>
+</div>
+
+<div class="col-lg-4">
+<center>
+<h4>Features Of Product</h4>
+<table width="100%" style="text-align:center;" class="table table-hover">
+<tr>
+<td>Series -</td><td> Legion 5</td>
+</tr>
+<tr>
+<td>Series -</td><td> Legion 5</td>
+</tr>
+<tr>
+<td>Series -</td><td> Legion 5</td>
+</tr>
+<tr>
+<td>Series -</td><td> Legion 5</td>
+</tr>
+<tr>
+<td>Series -</td><td> Legion 5</td>
+</tr>
+</table>
+<p>Available Items In Stock - <b class="text-success">5</b><br></p>
+<p>Discount Price - <b class="text-success">₹ 650.00</b> <i>Actual Price -<strike>₹950.00</strike></i></p>
+
+</center>
+</div>
+
+<div class="col-lg-4">
+<h4>Other Offers</h4>
+<p>
+<input type="checkbox" class="form-check-input" checked> Eligible for Free delivery
+<input type="checkbox" class="form-check-input" checked> EMI starts at 100 INR
+</p>
+
+<h4>Payment Offers</h4>
+
+<p >5% cashback on Online payment, for first 3 customers</p>
+<p >10% discount on SBI bank payment and HDFC bank payment</p>
+<button type="button"  class="btn" style="background-color:#76c4b3;">Edit</button>
+<button type="button"  class="btn" style="background-color:#76c4b3;">Save</button>
+
+</div>
+
+</div>
+</div>
+</form>
+</div>
+
+
+
+
+
+<br>
+</body>
+</html>
